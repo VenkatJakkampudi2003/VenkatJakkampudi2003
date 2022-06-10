@@ -1,5 +1,5 @@
 //Program on the hotel management
-//Linux version
+//LINUX Version
 /************************************************************************************************************************************************************************
 |   PURPOSE OF THE PROGRAM : 
 |   ------------------------
@@ -194,7 +194,6 @@ int main()
 
     //Residency Part
     Residency:
-    
     fprintf(Ro,"\n----------------------------------------------------------------------------------------------------");
     fprintf(Ro,"\nDate:%d-%d-%d\nTime :%d:%d:%d",myTime->tm_mday,myTime->tm_mon+1,myTime->tm_year + 1900,myTime->tm_hour,myTime->tm_min,myTime->tm_sec);
     fprintf(Ro,"\n");
@@ -234,7 +233,7 @@ int main()
     system("clear");
     switch (choice)
     {
-    case '1':    
+    case '1'://Beginning of the Suite rooms    
         printf("\n\t\t\t\t\t\t\t------------------------------------------------------");
         printf("\n\t\t\t\t\t\t\t|   Room Type   :   Suite                            |");
         printf("\n\t\t\t\t\t\t\t|----------------------------------------------------|");
@@ -246,7 +245,8 @@ int main()
         Resi[i] = 12500*stay;
         goto Done;
         break;
-    case '2':
+        //End of the Suite rooms
+    case '2'://Beginning of the case-2 King rooms
         printf("\n\t\t\t\t\t\t\t------------------------------------------------------");
         printf("\n\t\t\t\t\t\t\t|   Room Type   :   King                             |");
         printf("\n\t\t\t\t\t\t\t|----------------------------------------------------|");
@@ -258,7 +258,8 @@ int main()
         fprintf(Ro,"custmer choosed King room for %d days",stay);
         goto Done;
         break;
-    case '3':
+        //End of the King rooms
+    case '3'://Beginnging of the case-3 Queen room
         printf("\n\t\t\t\t\t\t\t------------------------------------------------------");
         printf("\n\t\t\t\t\t\t\t|   Room Type   :   Queen                            |");
         printf("\n\t\t\t\t\t\t\t|----------------------------------------------------|");
@@ -270,18 +271,17 @@ int main()
         Resi[i] = 8000*stay;
         goto Done;
         break;
-    case '4':
-        printf("\n\t\t\t\t\t\t\t------------------------------------------------------");
-        printf("\n\t\t\t\t\t\t\t|   Room Type   :   Quad                             |");
-        printf("\n\t\t\t\t\t\t\t|----------------------------------------------------|");
-        printf("\n\t\t\t\t\t\t\t|   Rooms available   :                              |");
-        printf("\n\t\t\t\t\t\t\t|   -------------------                              |");
+        //End of the Queen rooms
+    case '4'://Beginning of the case-4 quad room
+        printf("\n\t\t\t\t\t\t\t|   Rooms availability   :                              |");
+        printf("\n\t\t\t\t\t\t\t|   ----------------------                              |");
         printf("\n\t\t\t\t\t\t\t|   Enter stay : ");
         scanf("%d",&stay);
         fprintf(Ro,"custmer choosed Quad room for %d days",stay);
         Resi[i] = 9500*stay;
         goto Done;
         break;
+        //Ending of the quad rooms
     case 'P':
         goto Main_Menu;
         break;
@@ -334,7 +334,7 @@ int main()
     case '1':
         //Breakfast part
         Breakfast:
-        system("cls");
+        system("clear");
         printf("\t\t\t\t\t\t\t\t-------------------------------------------------------------\n");
         printf("\t\t\t\t\t\t\t\t|             B   R   E   A   K   F   A   S   T             |\n");
         printf("\t\t\t\t\t\t\t\t|-----------------------------------------------------------|\n");
@@ -357,38 +357,37 @@ int main()
         printf("\t\t\t\t\t\t\t\t| >>     E             To exit                              |\n");
         printf("\t\t\t\t\t\t\t\t|-----------------------------------------------------------|\n");
         printf("\t\t\t\t\t\t\t\t|           Enter your order   :   ");
-        scanf(" %c",&choice);
-        system("cls");
-        printf("\t\t\t\t\t\t\t\t--------------------------------------------------\n");
-        printf("\t\t\t\t\t\t\t\t|     C O D E       D  I   S   H      P R I C E  |\n");
-        printf("\t\t\t\t\t\t\t\t|    ---------     --------------    ------------|\n");
-        printf("\t\t\t\t\t\t\t\t|                                                |\n");
-        switch (choice)
+        scanf(" %c",&choice);                                               
+        system("clear");
+        printf("\t\t\t\t\t\t\t\t------------------------------------------------------------------------------\n");
+        printf("\t\t\t\t\t\t\t\t|  S.no   |                          Items                          |  price |\n");
+        printf("\t\t\t\t\t\t\t\t|---------|---------------------------------------------------------|--------|\n");
+        switch (choice)                                                                     //In switch case depending on the menu the quantity is asked
         {
         case '1':
-            printf("\t\t\t\t\t\t\t\t| >>     1            Idli           :    30     |\n");
-            printf("\t\t\t\t\t\t\t\t|-------------------------------------------------\n\t\t\t\t\t\t\t\t|   Enter quantity  :     ");
+            printf("\t\t\t\t\t\t\t\t|    1    |       Idli                                              |    30  |\n");
+            printf("\t\t\t\t\t\t\t\t|-----------------------------------------------------------------------------\n\t\t\t\t\t\t\t\t|   Enter quantity  :     ");
             scanf("%d",&quantity);
             Resta[i] = 30*quantity;
             goto Done;
             break;
         case '2':
-            printf("\t\t\t\t\t\t\t\t| >>     2            Vada           :    40     |\n");
-            printf("\t\t\t\t\t\t\t\t|-------------------------------------------------\n\t\t\t\t\t\t\t\t|   Enter quantity  :     ");
+            printf("\t\t\t\t\t\t\t\t|    2    |       Vada                                              |    40  |\n");
+            printf("\t\t\t\t\t\t\t\t|-----------------------------------------------------------------------------\n\t\t\t\t\t\t\t\t|   Enter quantity  :     ");
             scanf("%d",&quantity);
             Resta[i] = 40*quantity;
             goto Done;
             break;
         case '3':
-            printf("\t\t\t\t\t\t\t\t| >>     3            Puri           :    55     |\n");
-            printf("\t\t\t\t\t\t\t\t|-------------------------------------------------\n\t\t\t\t\t\t\t\t|   Enter quantity  :     ");
+            printf("\t\t\t\t\t\t\t\t|    3    |       Puri                                              |    55  |\n");
+            printf("\t\t\t\t\t\t\t\t|-----------------------------------------------------------------------------\n\t\t\t\t\t\t\t\t|   Enter quantity  :     ");
             scanf("%d",&quantity);
             Resta[i] = 55*quantity;
             goto Done;
             break;
         case '4':
-            printf("\t\t\t\t\t\t\t\t| >>     4            Dosa           :    50     |\n");
-            printf("\t\t\t\t\t\t\t\t|-------------------------------------------------\n\t\t\t\t\t\t\t\t|   Enter quantity  :     ");
+            printf("\t\t\t\t\t\t\t\t|    4    |       Dosa                                              |    50  |\n");
+            printf("\t\t\t\t\t\t\t\t|-----------------------------------------------------------------------------\n\t\t\t\t\t\t\t\t|   Enter quantity  :     ");
             scanf("%d",&quantity);
             Resta[i] = 50*quantity;
             goto Done;
@@ -455,41 +454,36 @@ int main()
             printf("\t\t\t\t\t\t\t\t|-------------------------------------------------------------------------------|\n");
             printf("\t\t\t\t\t\t\t\t|           Enter your order   :   ");
             scanf(" %c",&choice);
-            system("cls");
-            switch (choice)
+            system("clear");
+            printf("\t\t\t\t\t\t\t\t------------------------------------------------------------------------------\n");
+            printf("\t\t\t\t\t\t\t\t|  S.no   |                          Items                          |  price |\n");
+            printf("\t\t\t\t\t\t\t\t|---------|---------------------------------------------------------|--------|\n");
+            switch (choice)                                                         //In switch case depending on the menu the quantity is asked
             {
             case '1':
-                printf("\t\t\t\t\t\t\t\t--------------------------------------------------\n");
-                printf("\t\t\t\t\t\t\t\t|   S.no  |            ITEM              | Price |\n\t\t\t\t\t\t\t\t|------------------------------------------------|\n");
-                printf("\t\t\t\t\t\t\t\t|    1    |    Ulavacharu Biryani        |  200  |\n");
-                printf("\t\t\t\t\t\t\t\t|------------------------------------------------|\n\t\t\t\t\t\t\t\t| Enter quantity = ");
+                printf("\t\t\t\t\t\t\t\t|    1    |    Ulavacharu Biryani                                   |   200  |\n");
+                printf("\t\t\t\t\t\t\t\t|----------------------------------------------------------------------------|\n\t\t\t\t\t\t\t\t| Enter quantity = ");
                 scanf("%d",&quantity);
                 Resta[i] = 200*quantity;
                 goto Done;
                 break;
             case '2':
-                printf("\t\t\t\t\t\t\t\t--------------------------------------------------\n");
-                printf("\t\t\t\t\t\t\t\t|   S.no  |            ITEM              | Price |\n\t\t\t\t\t\t\t\t|------------------------------------------------|\n");
-                printf("\t\t\t\t\t\t\t\t|    2    |    Veg biryani               |  250  |\n");
-                printf("\t\t\t\t\t\t\t\t|------------------------------------------------|\n\t\t\t\t\t\t\t\t| Enter quantity = ");
+                printf("\t\t\t\t\t\t\t\t|    2    |    Veg biryani                                          |   250  |\n");
+                printf("\t\t\t\t\t\t\t\t|----------------------------------------------------------------------------|\n\t\t\t\t\t\t\t\t| Enter quantity = ");
                 scanf("%d",&quantity);
                 Resta[i] = 250*quantity;
                 goto Done;
                 break;
             case '3':
-                printf("\t\t\t\t\t\t\t\t--------------------------------------------------\n");
-                printf("\t\t\t\t\t\t\t\t|   S.no  |            ITEM              | Price |\n\t\t\t\t\t\t\t\t|------------------------------------------------|\n");
-                printf("\t\t\t\t\t\t\t\t|    3    |    Mushroom Biryani          |  250  |\n");
-                printf("\t\t\t\t\t\t\t\t|------------------------------------------------|\n\t\t\t\t\t\t\t\t| Enter quantity = ");
+                printf("\t\t\t\t\t\t\t\t|    3    |    Mushroom Biryani                                     |   250  |\n");
+                printf("\t\t\t\t\t\t\t\t|----------------------------------------------------------------------------|\n\t\t\t\t\t\t\t\t| Enter quantity = ");
                 scanf("%d",&quantity);
                 Resta[i] = 250*quantity;
                 goto Done;
                 break;
             case '4':
-                printf("\t\t\t\t\t\t\t\t--------------------------------------------------\n");
-                printf("\t\t\t\t\t\t\t\t|   S.no  |            ITEM              | Price |\n\t\t\t\t\t\t\t\t|------------------------------------------------|\n");
-                printf("\t\t\t\t\t\t\t\t|    4    |    Roti & Curries            |  150  |\n");
-                printf("\t\t\t\t\t\t\t\t|------------------------------------------------|\n\t\t\t\t\t\t\t\t| Enter quantity = ");
+                printf("\t\t\t\t\t\t\t\t|    4    |    Roti & Curries                                       |   150  |\n");
+                printf("\t\t\t\t\t\t\t\t|----------------------------------------------------------------------------|\n\t\t\t\t\t\t\t\t| Enter quantity = ");
                 scanf("%d",&quantity);
                 Resta[i] = 150*quantity;
                 goto Done;
@@ -511,8 +505,8 @@ int main()
                 break;
             }
         case '2':
-            //Non-Vegetarian menu part
-            NONVEG:
+            //Non-Vegetarian menu part      
+            NONVEG:                    //Printing the non-vegetarian food menu 
             system("clear");
             printf("\t\t\t\t\t\t\t\t---------------------------------------------------------------------------------\n");
             printf("\t\t\t\t\t\t\t\t|             N   O   N   -   V   E   G   E   T   A   R   I   A   N             |\n");
@@ -538,54 +532,43 @@ int main()
             printf("\t\t\t\t\t\t\t\t| >>     E              Any other key to exit                                   |\n");
             printf("\t\t\t\t\t\t\t\t|-------------------------------------------------------------------------------|\n");
             printf("\t\t\t\t\t\t\t\t|           Enter your order   :   ");
-            scanf(" %c",&choice);
-            switch (choice)
+            scanf(" %c",&choice);                                           //Traversing the users choice
+            system("clear");
+            printf("\t\t\t\t\t\t\t\t-----------------------------------------------------------------------------\n");
+            printf("\t\t\t\t\t\t\t\t|  S.no  |                          Items                          |  price |\n");
+            printf("\t\t\t\t\t\t\t\t|--------|---------------------------------------------------------|--------|\n");
+            switch (choice)                                                 //In switch case depending on the menu the quantity is asked 
             {
             case '1':
-                printf("\t\t\t\t\t\t\t\t----------------------------------------------------------\n");
-                printf("\t\t\t\t\t\t\t\t| S.no |                     Item                | Price |\n");
-                printf("\t\t\t\t\t\t\t\t|------|-----------------------------------------|-------|\n");
-                printf("\t\t\t\t\t\t\t\t|  1   | Chicken Dum Biryani                     |  350  |\n");
+                printf("\t\t\t\t\t\t\t\t|   1    | Chicken Dum Biryani                                     |   350  |\n");
                 printf("\t\t\t\t\t\t\t\t|Enter quantity : ");
                 scanf("%d",&quantity);
                 Resta[i] = 350*quantity;
                 goto Done;
                 break;
             case '2':
-                printf("\t\t\t\t\t\t\t\t----------------------------------------------------------\n");
-                printf("\t\t\t\t\t\t\t\t| S.no |                     Item                | Price |\n");
-                printf("\t\t\t\t\t\t\t\t|------|-----------------------------------------|-------|\n");
-                printf("\t\t\t\t\t\t\t\t|  2   | Chicken Fry piece Biryani               |  350  |\n");
+                printf("\t\t\t\t\t\t\t\t|   2    | Chicken Fry piece Biryani                               |   350  |\n");
                 printf("\t\t\t\t\t\t\t\t|Enter quantity : ");
                 scanf("%d",&quantity);
                 Resta[i] = 350*quantity;
                 goto Done;
                 break;
             case '3':
-                printf("\t\t\t\t\t\t\t\t----------------------------------------------------------\n");
-                printf("\t\t\t\t\t\t\t\t| S.no |                     Item                | Price |\n");
-                printf("\t\t\t\t\t\t\t\t|------|-----------------------------------------|-------|\n");
-                printf("\t\t\t\t\t\t\t\t|  3   | Special Chicken Biryani                 |  400  |\n");
+                printf("\t\t\t\t\t\t\t\t|   3    | Special Chicken Biryani                                 |   400  |\n");
                 printf("\t\t\t\t\t\t\t\t|Enter quantity : ");
                 scanf("%d",&quantity);
                 Resta[i] = 400*quantity;
                 goto Done;
                 break;
             case '4':
-                printf("\t\t\t\t\t\t\t\t----------------------------------------------------------\n");
-                printf("\t\t\t\t\t\t\t\t| S.no |                     Item                | Price |\n");
-                printf("\t\t\t\t\t\t\t\t|------|-----------------------------------------|-------|\n");
-                printf("\t\t\t\t\t\t\t\t|  4   | Mutton Dum Biryani                      |  450  |\n");
+                printf("\t\t\t\t\t\t\t\t|   4    | Mutton Dum Biryani                                      |   450  |\n");
                 printf("\t\t\t\t\t\t\t\t|Enter quantity : ");
                 scanf("%d",&quantity);
                 Resta[i] = 450*quantity;
                 goto Done;
                 break;
             case '5':
-                printf("\t\t\t\t\t\t\t\t----------------------------------------------------------\n");
-                printf("\t\t\t\t\t\t\t\t| S.no |                     Item                | Price |\n");
-                printf("\t\t\t\t\t\t\t\t|------|-----------------------------------------|-------|\n");
-                printf("\t\t\t\t\t\t\t\t|  5   | Venkat Grand Family pack                | 1000  |\n");
+                printf("\t\t\t\t\t\t\t\t|   5    | Venkat Grand Family pack                                |  1000  |\n");
                 printf("\t\t\t\t\t\t\t\t|Enter quantity : ");
                 scanf("%d",&quantity);
                 Resta[i] = 1000*quantity;
@@ -630,7 +613,9 @@ int main()
         system("clear");
         printf("\t\t\t\t\t\t\t\tYou chose Snacks\n");
         printf("\t\t\t\t\t\t\t\t________________________\n\n");
-        printf("\t\t\t\t\t\t\t\tSnack menu\n");
+        
+        /*Printing the snacks menu available in the restaurant*/
+        printf("\t\t\t\t\t\t\t\tSnack menu\n");                    
         printf("\t\t\t\t\t\t\t\t-------------------------------------------------------------------------------------------\n");
         printf("\t\t\t\t\t\t\t\t|                                   S   N   A   C   K   S                                 |\n");
         printf("\t\t\t\t\t\t\t\t|-----------------------------------------------------------------------------------------|\n");
@@ -655,12 +640,12 @@ int main()
         printf("\t\t\t\t\t\t\t\t|           Enter your order   :   ");
         scanf(" %c",&choice);
         system("clear");
-        switch (choice)
+        printf("\t\t\t\t\t\t\t\t-----------------------------------------------------------------------------\n");
+        printf("\t\t\t\t\t\t\t\t|  S.no  |                          Items                          |  price |\n");
+        printf("\t\t\t\t\t\t\t\t|--------|---------------------------------------------------------|--------|\n");
+        switch (choice)                                                             //In switch case depending on the menu the quantity is asked
         {
         case '1':
-            printf("\t\t\t\t\t\t\t\t-----------------------------------------------------------------------------\n");
-            printf("\t\t\t\t\t\t\t\t|  S.no  |                               Items                     |  price |\n");
-            printf("\t\t\t\t\t\t\t\t|--------|---------------------------------------------------------|--------|\n");
             printf("\t\t\t\t\t\t\t\t|    1   |   VGS-1 - 2pc Samosa, 2pc Puff, 2 Coke                  |   180  |\n");
             printf("\t\t\t\t\t\t\t\t|---------------------------------------------------------------------------|\n");
             printf("\t\t\t\t\t\t\t\t|   Enter quantity : ");
@@ -669,9 +654,6 @@ int main()
             goto Done;
             break;
         case '2':
-            printf("\t\t\t\t\t\t\t\t-----------------------------------------------------------------------------\n");
-            printf("\t\t\t\t\t\t\t\t|  S.no  |                               Items                     |  price |\n");
-            printf("\t\t\t\t\t\t\t\t|--------|---------------------------------------------------------|--------|\n");
             printf("\t\t\t\t\t\t\t\t|    2   |   VGS-2 - Pakoda, 10pc Pani poori, Chat                 |   250  |\n");
             printf("\t\t\t\t\t\t\t\t|---------------------------------------------------------------------------|\n");
             printf("\t\t\t\t\t\t\t\t|   Enter quantity : ");
@@ -680,9 +662,6 @@ int main()
             goto Done;
             break;
         case '3':
-            printf("\t\t\t\t\t\t\t\t-----------------------------------------------------------------------------\n");
-            printf("\t\t\t\t\t\t\t\t|  S.no  |                               Items                     |  price |\n");
-            printf("\t\t\t\t\t\t\t\t|--------|---------------------------------------------------------|--------|\n");
             printf("\t\t\t\t\t\t\t\t|    3   |   VGS-3 - Chiken Pizza, Hakka noodles, Lemon Logan      |   350  |\n");
             printf("\t\t\t\t\t\t\t\t|---------------------------------------------------------------------------|\n");
             printf("\t\t\t\t\t\t\t\t|   Enter quantity : ");
@@ -691,9 +670,6 @@ int main()
             goto Done;
             break;
         case '4':
-            printf("\t\t\t\t\t\t\t\t-----------------------------------------------------------------------------\n");
-            printf("\t\t\t\t\t\t\t\t|  S.no  |                               Items                     |  price |\n");
-            printf("\t\t\t\t\t\t\t\t|--------|---------------------------------------------------------|--------|\n");
             printf("\t\t\t\t\t\t\t\t|    4   |   VGS-4 - Pasta, Shawarma, Chicken Manchurian           |   220  |\n");
             printf("\t\t\t\t\t\t\t\t|---------------------------------------------------------------------------|\n");
             printf("\t\t\t\t\t\t\t\t|   Enter quantity : ");
@@ -892,7 +868,7 @@ void data_management()
         }
         fclose(Revenue);
         break;
-    default:system("clear");
+    default:system("cls");
         printf("\n\t\t\t\t\t\t\t\t----------------------------------");
         printf("\n\t\t\t\t\t\t\t\t*****    E    X    I    T    *****");
         printf("\n\t\t\t\t\t\t\t\t----------------------------------");
